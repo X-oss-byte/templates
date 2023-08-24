@@ -30,6 +30,5 @@ def throw_if_missing(obj: object, keys: list[str]) -> None:
     Raises:
         ValueError: If any keys are missing
     """
-    missing = [key for key in keys if key not in obj or not obj[key]]
-    if missing:
+    if missing := [key for key in keys if key not in obj or not obj[key]]:
         raise ValueError(f"Missing required fields: {', '.join(missing)}")

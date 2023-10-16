@@ -27,7 +27,7 @@ def setup():
     )
 
     if not response.ok:
-        raise Exception(f"Failed to register command")
+        raise Exception("Failed to register command")
 
     print("Successfully registered command")
 
